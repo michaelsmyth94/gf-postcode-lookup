@@ -11,5 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.setPublicPath('./');
+
 mix.js('resources/assets/js/plugin.js', 'public/js')
    .sass('resources/assets/scss/plugin.scss', 'public/css');

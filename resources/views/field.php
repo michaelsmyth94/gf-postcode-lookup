@@ -1,19 +1,17 @@
-<div class="gfpcl-initial">
+<div class="gfpcl-initial" id="gfpcl-initial-<?= $field_id; ?>">
     <div class="field">
-        <input type="text" value="<?= $value; ?>" class="lookup-field <?= $class; ?>" autocomplete="off"
-            
-        >
+        <input type="text" value="<?= $value; ?>" class="lookup-field <?= $class; ?>" <?= $attributes['placeholder']; ?> autocomplete="off">
 
         <div class="lookup-results">
             <ul class="result-list"></ul>
         </div>
     </div>
 
-    <a href="#" class="gfpcl-lookup" id="gfpcl-trigger-lookup" data-postcode-input=".lookup-field" onclick="return false;"><?= $button_text; ?></a>
+    <a href="#" class="gfpcl-lookup" id="gfpcl-trigger-lookup-<?= $field_id; ?>" data-postcode-input=".lookup-field" onclick="return false;"><?= $button_text; ?></a>
 </div>
 
 <div class="gfpcl-form-toggle">
-    <a href="#" id="toggle-form-state" data-default="Enter your address manually" data-manual="Find your address by postcode">Enter your address manually</a>
+    <a href="#" id="toggle-form-state-<?= $field_id; ?>" data-default="Enter your address manually" data-manual="Find your address by postcode">Enter your address manually</a>
 </div>
 
 <div class="gfpcl-address-fields ginput_complex ginput_container" id="<?= $field_id; ?>">
